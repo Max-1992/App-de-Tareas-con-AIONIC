@@ -10,10 +10,24 @@ export class TareasService {
 
   constructor() {  
     this.listas = [];
-    const lista1 = new Lista('Recolectar pidras del infinito');
-    const lista2 = new Lista('Heroes a desaparecer');
-
-    this.listas.push(lista1, lista2);
-    
+    this.cargarStorage();
   }
+
+  public crearLista( titulo:string ){
+    const lista = new Lista( titulo )
+    this.listas.push(lista);
+    this.guardarStorage();
+  }
+
+  public guardarStorage( ){
+      localStorage.setItem( 'data', JSON.stringify(this.listas));
+  }
+
+  public cargarStorage(){
+      if( JSON.parse(localStorage.getItem('data')) ){
+        this.listas = JSON.parse(localStorage.getItem('data'));
+    }
+   
+  }
+
 }
