@@ -1,9 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Add List</ion-title>
+<ion-header no-border>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button color="tertiary" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Name List</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark">
+  <ion-list color="dark">
+    <ion-item color="dark">
+        <ion-label position="floating">New Item</ion-label>
+        <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-header color="dark">
+      <ion-label>Tasks to do</ion-label>
+    </ion-header>
+
+    <ion-item color="dark">
+      <ion-checkbox slot="start" color="tertiary"></ion-checkbox>
+      <ion-label>Pasar pedidos San Isidro</ion-label>
+    </ion-item>
+  </ion-list>
 
 </ion-content>
