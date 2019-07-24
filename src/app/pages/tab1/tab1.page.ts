@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TareasService } from '../../services/tareas.service';
-import { Lista } from '../../models/lista.models';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -10,9 +11,12 @@ import { Lista } from '../../models/lista.models';
 })
 export class Tab1Page {
 
-  constructor( public tareasService: TareasService ) {
-    
+  constructor( public tareasService:TareasService,
+               private router:Router ) {      
+   }
 
-  }
+  public agregarLista(){
+     this.router.navigateByUrl('tabs/tab1/agregar');
+   }
 
 }
