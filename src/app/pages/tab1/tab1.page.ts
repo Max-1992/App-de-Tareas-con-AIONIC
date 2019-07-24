@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TareasService } from '../../services/tareas.service';
+import { Lista } from '../../models/lista.models';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { TareasService } from '../../services/tareas.service';
 export class Tab1Page {
 
   constructor( public tareasService: TareasService ) {
-        
+    
+
   }
 
 }

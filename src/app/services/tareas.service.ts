@@ -8,8 +8,12 @@ export class TareasService {
 
   public listas:Lista[];
 
-  constructor() { 
+  constructor() {  
     this.listas = [];
-    console.log('Servicio Inicializado');
+    const lista1 = new Lista('Recolectar pidras del infinito');
+    const lista2 = new Lista('Heroes a desaparecer');
+
+    this.listas.push(lista1, lista2);
+    
   }
 }
