@@ -15,6 +15,7 @@ export class AgregarPage {
 
   public lista:Lista;
   public nombreItem:string = '';
+  
 
   constructor( public tareasService:TareasService,
                private activateRoute: ActivatedRoute ) {
