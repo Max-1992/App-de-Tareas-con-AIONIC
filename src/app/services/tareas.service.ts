@@ -17,6 +17,7 @@ export class TareasService {
     const lista = new Lista( titulo )
     this.listas.push(lista);
     this.guardarStorage();
+    return lista.id;
   }
 
   public guardarStorage( ){
@@ -28,6 +29,11 @@ export class TareasService {
         this.listas = JSON.parse(localStorage.getItem('data'));
     }
    
+  }
+
+  public obtenerLista( id: string | number ) {
+       id = Number(id);
+       return this.listas.find( listaData => listaData.id === id )
   }
 
 }

@@ -18,7 +18,7 @@ export class Tab1Page {
    }
 
   public async agregarLista(){
-    //  this.router.navigateByUrl('tabs/tab1/agregar');
+    
     const alert = await this.alertCter.create({
       header: 'New List',
       inputs: [
@@ -45,7 +45,10 @@ export class Tab1Page {
             }
 
             //Ejecutar Método para Crear lista
-            this.tareasService.crearLista(data.titulo);
+            const listaId = this.tareasService.crearLista(data.titulo);
+            
+            //Redirección a la pagina de agregar Items en la lista
+            this.router.navigateByUrl(`tabs/tab1/agregar/${listaId}`);
 
           }
         }
