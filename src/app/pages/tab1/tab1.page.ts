@@ -58,8 +58,5 @@ export class Tab1Page {
     alert.present();
    }
   
-   listaSeleccionada( id: string | number) {
-     const ID = Number(id)
-    this.router.navigateByUrl(`tabs/tab1/agregar/${ID}`);
-   }
+ 
 }
