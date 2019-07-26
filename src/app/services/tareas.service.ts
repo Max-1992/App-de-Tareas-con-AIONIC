@@ -36,7 +36,7 @@ export class TareasService {
        return this.listas.find( listaData => listaData.id === id )
   }
 
-  borrarLista( lista:Lista ){
+  public borrarLista( lista:Lista ){
     this.listas = this.listas.filter( listaData => listaData.id !== lista.id );
 
     this.guardarStorage();
